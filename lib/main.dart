@@ -13,12 +13,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-            centerTitle: true,
-            elevation: 0,
-          ),
-          fontFamily: GoogleFonts.rubik().fontFamily),
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          elevation: 0,
+        ),
+        fontFamily: GoogleFonts.rubik().fontFamily
+      ),
       debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData.dark(),
       home: const HomePage(),
     );
   }

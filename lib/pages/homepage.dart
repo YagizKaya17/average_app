@@ -12,13 +12,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  GlobalKey<FormState> formKey = GlobalKey<FormState>(); // TextFi
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
   TextEditingController tfController = TextEditingController();
 
   int selectCredit = 1;
   double selectNote = 4.0;
   String selectLessonName = '';
-  bool clicked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -170,7 +169,6 @@ class _HomePageState extends State<HomePage> {
               size: 36,
             ),
             onPressed: () {
-              clicked = true;
               if (tfController.text != '') {
                 setState(() {
                   formKey.currentState!.save();
@@ -180,7 +178,6 @@ class _HomePageState extends State<HomePage> {
                       lessonNote: selectNote);
                   DataHelper.addLesson(lessonData);
                   tfController.text = '';
-                  clicked = false;
                 }
                 );
               }else {
